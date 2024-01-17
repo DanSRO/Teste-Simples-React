@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #222222;
+    color: white;
+}
+
+a{
+    text-decoration: none;
+}
+
+section#articles{
+    margin-top: 4rem;
+    max-width:  1240px;
+    padding: 0 4rem;
+    margin: 4rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 46px;
+}
+
+section#articles .img-article{
+    width: 185px;
+    height: 205px;
+}
