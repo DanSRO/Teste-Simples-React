@@ -1,17 +1,17 @@
 import React from "react";
-import './style.css';
+import estilos from './estilos.module.scss';
 import logoImg from "../../assets/images/saturno.png";
-export function Navbar (){
+export const Navbar:React.FC = ()=>{
     
         return (
             <header>
-                <nav id="navbar">
-                <div className="nav-brand">
+                <nav id={estilos.navbar}>
+                <div className={estilos.navBrand}>
                     <img src={logoImg} alt=""/>
                     <h1>Space Flight News</h1>
                 </div>
                 
-                <ul className="nav-list">
+                <ul className={estilos.navList}>
                     <li><a href="">Home</a></li>
                     <li><a href="">Trending</a></li>
                     <li><a href="">Categories</a></li>
@@ -21,4 +21,3 @@ export function Navbar (){
             </header>
         );        
 }
-// export default Navbar;

@@ -23,7 +23,7 @@ section#articles{
     gap: 46px;
 }
 
-section#articles .img-article{
+img{
     width: 185px;
     height: 205px;
 }
