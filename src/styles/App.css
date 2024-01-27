@@ -24,6 +24,6 @@ section#articles{
 }
 
 img{
-    width: 185px;
-    height: 205px;
+    max-width: 350px;
+    border-radius: 5px;
 }
