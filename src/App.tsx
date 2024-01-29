@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import {Navbar} from './components/Navbar/Navbar';
 import { Article } from './components/Articles/Article';
+import { ThreeDots } from 'react-loader-spinner';
 
 interface NewsItem{
   id:string;
@@ -31,7 +32,23 @@ export const App: React.FC = () => {
     <> 
     <Navbar/>
     <section id='articles'>
-      {news.map((article)=>{
+      {news.length === 0 ? ( 
+      <div 
+        style={{
+          height:'400px', 
+          width:'100%', 
+          display:'flex', 
+          justifyContent:'center', 
+          alignItems:'center'}}>
+        <ThreeDots
+          height={80}
+          width={80}
+          radius={9}
+          color="white"
+          ariaLabel="loading"
+        />
+      </div>
+      ) : (news.map((article)=>{
         return(
           <Article
             key={article.id}
@@ -41,7 +58,8 @@ export const App: React.FC = () => {
             thumbnail={article.imageUrl}
           />
         );  
-      })}
+      })
+    )}
     </section>
     </>
   );
